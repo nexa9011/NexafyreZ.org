@@ -1,0 +1,504 @@
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rifqi Arasy - Software Engineering</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+background-color: #000000;
+}
+/* Custom iOS Scrollbar */
+::-webkit-scrollbar {
+width: 0px;
+background: transparent;
+}
+/* Fade Animation */
+@keyframes fadeUp {
+0% {
+opacity: 0;
+transform: translateY(20px) scale(0.98);
+}
+100% {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+}
+.animate-fade-in {
+animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+animation-iteration-count: 1;
+}
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+/* Custom Toggle Switch */
+.toggle-checkbox:checked {
+right: 0;
+border-color: #81D8D0;
+}
+.toggle-checkbox:checked + .toggle-label {
+background-color: #81D8D0;
+}
+/* Subtle texture for iOS feeling */
+.ios-glass {
+background: rgba(30, 30, 30, 0.4);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.tiffany-glow {
+box-shadow: 0 0 60px -20px rgba(129, 216, 208, 0.15);
+}
+/* Card Hover Effects */
+.card-image-hover {
+transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .card-image-hover {
+transform: scale(1.03);
+}
+</style>
+<style>
+.invisible { visibility: hidden !important; }
+</style><meta name="disabled-font-classes" content="font-roboto,font-montserrat,font-poppins,font-playfair,font-instrument-serif,font-merriweather,font-bricolage,font-jakarta,font-manrope,font-space-grotesk,font-work-sans,font-pt-serif,font-geist-mono,font-space-mono,font-quicksand,font-nunito,font-newsreader,font-google-sans-flex,font-oswald,font-dm-sans,font-cormorant">
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><style id="border-gradient-shared-style">
+[style*="--border-gradient"]::before {
+content: "";
+position: absolute;
+inset: 0;
+padding: 1px;
+border-radius: var(--border-radius-before, inherit);
+-webkit-mask: linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+background: var(--border-gradient);
+pointer-events: none;
+}</style></head>
+  <body class="min-h-screen flex flex-col items-center selection:bg-[#81D8D0] selection:text-black text-white bg-black w-full relative">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Background (component) added by Aura -->
+<div class="aura-background-component fixed top-0 w-full h-screen -z-10" data-alpha-mask="80" style="; mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)"><div data-us-project="qPVvnWEWLLiJgYtSkKyB" class="absolute top-0 left-0 -z-10 w-full h-full"></div>
+<script type="text/javascript">
+  !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+</script></div>
+    <!-- Navigation (iOS Dynamic Island Style) -->
+    <nav class="fixed top-6 z-50 animate-fade-in">
+      <div class="ios-glass flex rounded-full pt-1.5 pr-1.5 pb-1.5 pl-1.5 shadow-2xl gap-x-1 gap-y-1 items-center">
+  
+  <a href="#" class="px-5 py-2.5 rounded-full text-xs font-medium text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300 font-geist">
+    About
+  </a>
+  
+</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="grid grid-cols-1 min-h-screen md:px-8 md:grid-cols-12 md:gap-6 z-10 w-full max-w-7xl pt-20 pr-4 pb-10 pl-4 gap-x-4 gap-y-10 items-center">
+  <!-- Left Column: Title & Intro -->
+  <div class="md:col-span-7 flex flex-col justify-center gap-6 md:gap-8 order-2 md:order-1">
+    <!-- Availability Badge -->
+    <div class="flex animate-fade-in animate-delay-100 opacity-0 gap-x-3 gap-y-3 items-center">
+      <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#81D8D0] opacity-75"></span>
+      <span class="inline-flex h-2.5 w-2.5 bg-zinc-800 rounded-full relative"></span>
+      </span>
+      <span class="uppercase text-xs font-medium text-zinc-600 tracking-wide font-geist">made by levi</span>
+    </div>
+
+    <!-- Main Heading -->
+    <div class="animate-fade-in animate-delay-200 opacity-0">
+      <h1 class="md:text-[70px] leading-[0.95] bg-clip-text text-4xl font-semibold text-transparent tracking-tight font-geist bg-gradient-to-b from-white via-white to-white/50">NexaFyreZ</h1>
+      <p class="leading-relaxed md:text-sm text-sm font-light text-white/50 tracking-widest font-geist text-justify max-w-md mt-6">A place where strategy meets chaos, loyalty builds power, and only the sharpest minds thrive.</p>
+    </div>
+
+    <!-- Action Area -->
+    <div class="flex gap-6 animate-fade-in animate-delay-300 opacity-0 gap-x-6 gap-y-6 items-center">
+      <div class="inline-block bg-transparent">
+        <style class="">
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+          @property --gradient-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+          }
+
+          @property --gradient-angle-offset {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+          }
+
+          @property --gradient-percent {
+            syntax: "<percentage>";
+            initial-value: 20%;
+            inherits: false;
+          }
+
+          @property --gradient-shine {
+            syntax: "<color>";
+            initial-value: #8484ff;
+            inherits: false;
+          }
+
+          .shiny-cta {
+            --gradient-angle: 0deg;
+            --gradient-angle-offset: 0deg;
+            --gradient-percent: 20%;
+            --gradient-shine: #8484ff;
+            --shadow-size: 2px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 9999px;
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #ffffff;
+            background: linear-gradient(#000000, #000000) padding-box, conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)), transparent 0%, #1d4ed8 5%, var(--gradient-shine) 15%, #1d4ed8 30%, transparent 40%, transparent 100%) border-box;
+            border: 2px solid transparent;
+            box-shadow: inset 0 0 0 1px #1a1818;
+            outline: none;
+            transition: --gradient-angle-offset 800ms cubic-bezier(0.25, 1, 0.5, 1), --gradient-percent 800ms cubic-bezier(0.25, 1, 0.5, 1), --gradient-shine 800ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+            cursor: pointer;
+            isolation: isolate;
+            outline-offset: 4px;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            z-index: 0;
+            animation: border-spin 2.5s linear infinite;
+          }
+
+          @keyframes border-spin {
+            to {
+              --gradient-angle: 360deg;
+            }
+          }
+
+          .shiny-cta:active {
+            transform: translateY(1px);
+          }
+
+          .shiny-cta::before {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            --size: calc(100% - 6px);
+            --position: 2px;
+            --space: 4px;
+            width: var(--size);
+            height: var(--size);
+            background: radial-gradient(circle at var(--position) var(--position), white 0.5px, transparent 0) padding-box;
+            background-size: var(--space) var(--space);
+            background-repeat: space;
+            mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg), black, transparent 10% 90%, black);
+            border-radius: inherit;
+            opacity: 0.4;
+            pointer-events: none;
+          }
+
+          .shiny-cta::after {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(-50deg, transparent, #1d4ed8, transparent);
+            mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+            opacity: 0.6;
+            animation: shimmer 4s linear infinite;
+            animation-play-state: running;
+          }
+
+          .shiny-cta span {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+          }
+
+          .shiny-cta span::before {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            --size: calc(100% + 1rem);
+            width: var(--size);
+            height: var(--size);
+            box-shadow: inset 0 -1ex 2rem 4px #1d4ed8;
+            opacity: 0;
+            border-radius: inherit;
+            transition: opacity 800ms cubic-bezier(0.25, 1, 0.5, 1);
+            animation: breathe 4.5s linear infinite;
+          }
+
+          @keyframes shimmer {
+            to {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+          }
+
+          @keyframes breathe {
+
+            0%,
+            100% {
+              transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+              transform: translate(-50%, -50%) scale(1.20);
+            }
+          }
+        </style>
+        <button class="shiny-cta focus:outline-none cursor-pointer" onclick="window.location.href='https://discord.gg/nxontop'" role="button">
+  <style>
+    [data-element-id="aura-emkthrq62b7f86ca"] {
+      --gradient-shine: #81D8D0 !important;
+      background: linear-gradient(#000000, #000000) padding-box, conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)), transparent 0%, #0d9488 5%, var(--gradient-shine) 15%, #0d9488 30%, transparent 40%, transparent 100%) border-box !important;
+    }
+    [data-element-id="aura-emkthrq62b7f86ca"]::after {
+      background: linear-gradient(-50deg, transparent, #0d9488, transparent) !important;
+    }
+    [data-element-id="aura-emkthrq62b7f86ca"] span::before {
+      box-shadow: inset 0 -1ex 2rem 4px #0d9488 !important;
+    }
+  </style>
+  <span class=""><a href="https://discord.gg/nxontop" class="font-geist">Join now</a>
+</span>
+</button>
+      </div>
+      <div class="flex gap-x-2 gap-y-4 items-center">
+  <a href="https://www.instagram.com/rifqiarasyy" class="text-white/40 hover:text-[#81D8D0] transition-colors">
+    
+  </a>
+  <a href="#" class="text-white/40 hover:text-[#81D8D0] transition-colors">
+
+  </a>
+  <a href="https://www.linkedin.com/in/rifqiarasy/" class="text-white/40 hover:text-[#81D8D0] transition-colors">
+    
+  </a>
+
+  <a href="https://github.com/ReiArasy" class="text-white/40 hover:text-[#81D8D0] transition-colors">
+    
+  </a>
+</div>
+    </div>
+  </div>
+
+  <!-- Right Column: iOS Widgets Grid -->
+  <div class="md:col-span-5 flex flex-col gap-4 order-1 md:order-2 opacity-0 animate-fade-in animate-delay-300 mt-10 lg:mt-0">
+    <!-- Widget Container -->
+    <div class="grid grid-cols-2 grid-rows-3 gap-4 w-full relative gap-x-4 gap-y-4">
+      <!-- Profile Card -->
+      <div class="ios-glass col-span-2 flex hover:bg-white/5 transition-colors duration-500 group tiffany-glow cursor-pointer -translate-x-6 rounded-[32px] pt-6 pr-6 pb-6 pl-8 translate-x-3 items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-[#81D8D0] to-indigo-600 p-[2px]">
+            <div class="flex overflow-hidden bg-black w-full h-full bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2c0646f8-19a8-45e3-b83a-4588c5bb8ca1_320w.png)] bg-cover bg-center rounded-full items-center justify-center">
+              
+            </div>
+          </div>
+          <div class="">
+            <h3 class="text-base font-medium text-white tracking-tight font-geist">Owner</h3>
+            <p class="text-xs text-white/40 font-geist mt-0.5">Levi, Tanush</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stats Widget -->
+
+
+      <!-- Toggle Widget -->
+
+
+      <!-- Skill Stack / Visual -->
+      
+      
+    </div>
+  </div>
+</main>
+
+    <!-- Selected Work Section -->
+    
+    <section class="md:px-8 z-10 w-full max-w-7xl border-white/5 border-t pt-24 pr-4 pb-24 pl-4" id="project">
+  <div class="flex flex-col md:flex-row md:items-end gap-4 mb-12 gap-x-4 gap-y-4 justify-between">
+    <div class="">
+      <h2 class="text-3xl md:text-5xl tracking-tight text-white mb-2 font-geist font-semibold">
+        Selected Work
+      </h2>
+      <p class="text-white/50 text-sm md:text-base font-light tracking-wide max-w-lg font-geist">
+        A collection of digital products, brands, and experiences I've had
+        the pleasure of building.
+</p>
+    </div>
+    
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 bg-gradient-to-br from-white/10 via-white/0 to-white/10 rounded-3xl gap-x-6 gap-y-6" style="position: relative; --border-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)); --border-radius-before: 24px">
+  <!-- Project Card 1 -->
+  <div class="group ios-glass hover:border-white/10 transition-all duration-500 rounded-[32px] pt-1.5 pr-1.5 pb-1.5 pl-1.5" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">
+    <div class="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
+      <!-- Placeholder Visual -->
+      <div class="card-image-hover flex bg-gradient-to-br from-neutral-900/40 to-black absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+        <div class="flex flex-col bg-white/5 w-3/4 h-3/4 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1e92e73d-9a9c-46b1-9dfc-84beb500ba6e_1600w.png)] bg-cover bg-center border-white/5 border rounded-xl pt-6 pr-6 pb-6 pl-6 shadow-2xl backdrop-blur-md">
+          
+          <div class="h-2 w-1/2 bg-white/20 rounded-full mb-2"></div>
+          <div class="h-2 w-1/3 bg-white/10 rounded-full"></div>
+        </div>
+      </div>
+      <!-- Overlay Button -->
+      <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        
+      </div>
+    </div>
+    <div class="md:p-5 flex pt-3 pr-3 pb-3 pl-3 items-start justify-between">
+      <div class="">
+        <h3 class="group-hover:text-[#81D8D0] transition-colors md:text-xl text-sm font-medium text-white tracking-tight font-geist" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">Youth For Earth Surabaya
+        </h3>
+        
+      </div>
+      <div class="flex gap-2 gap-x-2 gap-y-2">
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Card 1 -->
+  <div class="group ios-glass hover:border-white/10 transition-all duration-500 rounded-[32px] pt-1.5 pr-1.5 pb-1.5 pl-1.5" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">
+    <div class="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
+      <!-- Placeholder Visual -->
+      <div class="card-image-hover flex bg-gradient-to-br from-neutral-900/40 to-black absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+        <div class="flex flex-col bg-white/5 w-3/4 h-3/4 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/66e55e56-9c23-4c36-a926-77044f27b908_1600w.png)] bg-cover border-white/5 border rounded-xl pt-6 pr-6 pb-6 pl-6 shadow-2xl backdrop-blur-md">
+          
+          
+          
+        </div>
+      </div>
+      <!-- Overlay Button -->
+      <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        
+      </div>
+    </div>
+    <div class="md:p-5 flex pt-3 pr-3 pb-3 pl-3 items-start justify-between">
+      <div class="">
+        <h3 class="group-hover:text-[#81D8D0] transition-colors md:text-xl text-normal font-medium text-white tracking-tight font-geist" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">Aivaa: Rise of Creation</h3>
+        
+      </div>
+      <div class="flex gap-2 gap-x-2 gap-y-2">
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Card 1 -->
+  <div class="group ios-glass hover:border-white/10 transition-all duration-500 rounded-[32px] pt-1.5 pr-1.5 pb-1.5 pl-1.5" onclick="window.location.href='https://www.linkedin.com/posts/rifqiarasy_blender3d-3dart-environmentdesign-activity-7392852995543248896-ZKVY?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAAEVu77oBX-p4YM1tgONsAvDH801Og1-qg7E'" role="button">
+    <div class="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
+      <!-- Placeholder Visual -->
+      <div class="card-image-hover flex bg-gradient-to-br from-neutral-900/40 to-black absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+        <div class="flex flex-col bg-white/5 w-3/4 h-3/4 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/29592b70-5289-4a61-a3f4-b1e539b4e07b_1600w.png)] bg-cover bg-center border-white/5 border rounded-xl pt-6 pr-6 pb-6 pl-6 shadow-2xl backdrop-blur-md">
+          
+          
+          
+        </div>
+      </div>
+      <!-- Overlay Button -->
+      <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        
+      </div>
+    </div>
+    <div class="md:p-5 flex pt-3 pr-3 pb-3 pl-3 items-start justify-between">
+      <div class="">
+        <h3 class="group-hover:text-[#81D8D0] transition-colors md:text-xl text-sm font-medium text-white tracking-tight font-geist" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">Gaming Studio</h3>
+        
+      </div>
+      <div class="flex gap-2 gap-x-2 gap-y-2">
+        
+        
+      </div>
+    </div>
+  </div>
+  <!-- Project Card 1 -->
+  <div class="group ios-glass hover:border-white/10 transition-all duration-500 rounded-[32px] pt-1.5 pr-1.5 pb-1.5 pl-1.5" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">
+    <div class="overflow-hidden rounded-[28px] relative aspect-[4/3] bg-[#111]">
+      <!-- Placeholder Visual -->
+      <div class="card-image-hover flex bg-gradient-to-br from-neutral-900/40 to-black absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+        <div class="flex flex-col bg-white/5 w-3/4 h-3/4 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3948ceeb-fe6c-4dbc-9db9-a2ecb8ce57ea_3840w.png?w=800&amp;q=80)] bg-cover border-white/5 border rounded-xl pt-6 pr-6 pb-6 pl-6 shadow-2xl backdrop-blur-md">
+          
+          
+          
+        </div>
+      </div>
+      <!-- Overlay Button -->
+      <div class="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        
+      </div>
+    </div>
+    <div class="md:p-5 flex pt-3 pr-3 pb-3 pl-3 items-start justify-between">
+      <div class="">
+        <h3 class="group-hover:text-[#81D8D0] transition-colors md:text-xl text-sm font-medium text-white tracking-tight font-geist" onclick="window.location.href='https://youthforearthsurabaya.com/'" role="button">Company Profile Travel</h3>
+        
+      </div>
+      <div class="flex gap-2 gap-x-2 gap-y-2">
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Card 1 -->
+  
+
+  
+</div>
+</section>
+
+    <!-- Footer Simple -->
+    <div class="text-center w-full border-white/5 border-t mt-10 pt-12 pb-12">
+      <p class="text-[10px] uppercase text-white/20 tracking-widest font-geist mb-4">build by Levi</p>
+      <div class="flex gap-6 gap-x-6 gap-y-6 justify-center">
+
+  
+  
+  
+</div>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  
+</body></html>
